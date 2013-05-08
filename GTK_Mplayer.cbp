@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="GTK_Mplayer" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/GTK_Mplayer" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/GTK_Mplayer" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="`pkg-config --cflags gtkmm-3.0`" />
+		</Compiler>
+		<Linker>
+			<Add option="`pkg-config --libs gtkmm-3.0`" />
+		</Linker>
+		<Unit filename="main.cpp" />
+		<Unit filename="mplayer.cpp" />
+		<Unit filename="mplayer.h" />
+		<Extensions>
+			<code_completion>
+				<search_path add="/usr/include/gtkmm-3.0" />
+				<search_path add="/usr/lib/gtkmm-3.0/include" />
+				<search_path add="/usr/include/gdkmm-3.0/" />
+				<search_path add="/usr/lib/gdkmm-3.0/include/" />
+			</code_completion>
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
